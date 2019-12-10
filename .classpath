@@ -5,7 +5,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry including="**/*.java" kind="src" output="target/classes" path="src">
+	<classpathentry excluding="com/test/apiDay01/|com/test/apiDay02/|com/test/apiDay03/|com/test/apiDay04/|com/test/apiDay05/|com/test/apiDay06/|com/test/apiDay07/|com/test/javaBasic/|com/test/oopDay01/|com/test/oopDay02/|com/test/oopDay03/|com/test/oopDay04/|com/test/oopDay05/|com/test/oopDay06/" including="**/*.java" kind="src" output="target/classes" path="src">
 		<attributes>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
