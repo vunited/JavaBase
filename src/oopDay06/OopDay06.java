@@ -1,17 +1,17 @@
-package com.test.oopDay06;
+package oopDay06;
 
 public class OopDay06 {
 	public static void main(String[] args) {
 		Member mem1 = new Member();
 		mem1.setAge(18);
-		mem1.setName("ÕÅÈı");
+		mem1.setName("å¼ ä¸‰");
 		Member mem2 = new Member();
 		mem2.setAge(20);
-		mem2.setName("ÕÅÈı");
+		mem2.setName("å¼ ä¸‰");
 		System.out.println(mem1.equals(mem2));
 		System.out.println(mem1.toString());
 		
-//		»ù±¾Êı¾İÀàĞÍ                    °ü×°Àà
+//		åŸºæœ¬æ•°æ®ç±»å‹                    åŒ…è£…ç±»
 //		byte                Byte
 //		short               Short
 //		int                 Integer
@@ -22,10 +22,10 @@ public class OopDay06 {
 //		boolean             Boolean
 		
 		
-//		Integer Àà
-//		int µÄ °ü×°Àà£¨·â×°Àà£©
+//		Integer ç±»
+//		int çš„ åŒ…è£…ç±»ï¼ˆå°è£…ç±»ï¼‰
         
-//		´´½¨°ü×°Àà¶ÔÏó
+//		åˆ›å»ºåŒ…è£…ç±»å¯¹è±¡
 		Integer int01=new Integer(12);
 		Integer int02=new Integer("12");
 		System.out.println(int01);
@@ -33,21 +33,21 @@ public class OopDay06 {
 		System.out.println(int01+int02);
 //		Integer int03=new Integer("abc"); !!!!!!
 		
-//		Integer ³£ÓÃ·½·¨
-//		Integer.parseInt(s)   ×Ö·û´®×ªÊı×Ö
-		System.out.println(Integer.toBinaryString(500)); //Êı×Ö×ª¶ş½øÖÆ×Ö·û´® Arrays.binarySearch
-		System.out.println(Integer.toHexString(500)); //Êı×Ö×ªÊ®Áù½øÖÆ×Ö·û´®
-		System.out.println(Integer.toOctalString(500)); //Êı×Ö×ª°Ë½øÖÆ×Ö·û´®
+//		Integer å¸¸ç”¨æ–¹æ³•
+//		Integer.parseInt(s)   å­—ç¬¦ä¸²è½¬æ•°å­—
+		System.out.println(Integer.toBinaryString(500)); //æ•°å­—è½¬äºŒè¿›åˆ¶å­—ç¬¦ä¸² Arrays.binarySearch
+		System.out.println(Integer.toHexString(500)); //æ•°å­—è½¬åå…­è¿›åˆ¶å­—ç¬¦ä¸²
+		System.out.println(Integer.toOctalString(500)); //æ•°å­—è½¬å…«è¿›åˆ¶å­—ç¬¦ä¸²
 		
 		System.out.println(int01.equals(int02));
 		System.out.println(int01==int02);
 		
 		
 		Integer int03=new Integer(20);
-		int int04=int03.intValue(); //ÒÔintÀàĞÍ·µ»Ø¸ÃInteger¶ÔÏóµÄÖµ
+		int int04=int03.intValue(); //ä»¥intç±»å‹è¿”å›è¯¥Integerå¯¹è±¡çš„å€¼
 	
-//		String int µÄ×ª»»
-//		String===¡·int
+//		String int çš„è½¬æ¢
+//		String===ã€‹int
 		String str1="100";
 		int int05=Integer.parseInt(str1);
 		
@@ -57,17 +57,17 @@ public class OopDay06 {
 		String str3=Integer.toString(int06);
 		String str4=String.valueOf(int06);
 		
-//		²ğÏä ×°Ïä
-//		²ğÏä
+//		æ‹†ç®± è£…ç®±
+//		æ‹†ç®±
 		Integer int07=new Integer(23);
-		int int08=int07.intValue();   //ÊÖ¶¯²ğÏä
+		int int08=int07.intValue();   //æ‰‹åŠ¨æ‹†ç®±
 		
-		int int09=int07;     //×Ô¶¯²ğÏä
+		int int09=int07;     //è‡ªåŠ¨æ‹†ç®±
 		
-//		×°Ïä
+//		è£…ç®±
 		int int10=8;
-		Integer int11=Integer.valueOf(int10); //ÊÖ¶¯×°Ïä
-		Integer int12=int10;    //×Ô¶¯×°Ïä
+		Integer int11=Integer.valueOf(int10); //æ‰‹åŠ¨è£…ç®±
+		Integer int12=int10;    //è‡ªåŠ¨è£…ç®±
 		
 		System.out.println(Integer.MAX_VALUE);
 //		Integer.MIN_VALUE
