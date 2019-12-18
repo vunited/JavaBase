@@ -1,4 +1,4 @@
-package com.junit_1;
+package com.junit;
 
 import static org.junit.Assert.*;
 
@@ -8,7 +8,7 @@ import java.util.Collection;
 import org.junit.Test;
 import org.junit.runners.Parameterized.Parameters;
 
-import com.junit_1.Class_1_1.Calculator;
+import com.junit.Class_1_1.Calculator;
 
 public class ParameterizedTest {
 	

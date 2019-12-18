@@ -1,4 +1,4 @@
-package com.junit_1;
+package com.junit;
 
 import java.nio.channels.IllegalSelectorException;
 

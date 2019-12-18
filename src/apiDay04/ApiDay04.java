@@ -1,4 +1,4 @@
-package com.test.apiDay04;
+package apiDay04;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -23,99 +23,99 @@ public class ApiDay04 {
 //		BigDecimal a=new BigDecimal(int/double/long/string);
 		BigDecimal a = new BigDecimal("9");
 		BigDecimal b = new BigDecimal("2.2");
-//		Îª·ÀÖ¹¾«¶È¶ªÊ§£¬Ê¹ÓÃStringÀàĞÍ×÷Îª²ÎÊı
-//		System.out.println(a.add(b));  //¼Ó·¨
-//		System.out.println(a.subtract(b));  //¼õ·¨
-//		System.out.println(a.multiply(b));//³Ë·¨
-//		System.out.println(a.divide(b)); //³ı·¨
-//		System.out.println(a.remainder(b)); //Óà
+//		ä¸ºé˜²æ­¢ç²¾åº¦ä¸¢å¤±ï¼Œä½¿ç”¨Stringç±»å‹ä½œä¸ºå‚æ•°
+//		System.out.println(a.add(b));  //åŠ æ³•
+//		System.out.println(a.subtract(b));  //å‡æ³•
+//		System.out.println(a.multiply(b));//ä¹˜æ³•
+//		System.out.println(a.divide(b)); //é™¤æ³•
+//		System.out.println(a.remainder(b)); //ä½™
 
-		System.out.println(a.divide(b, 3, 4)); // ³ı·¨
-		System.out.println(BigDecimal.ROUND_HALF_UP); // ËÄÉáÎåÈë  4
-		System.out.println(BigDecimal.ROUND_CEILING); // ÏòÉÏ½øÎ»  2
-		System.out.println(BigDecimal.ROUND_FLOOR); // ²»½øÎ»  3
+		System.out.println(a.divide(b, 3, 4)); // é™¤æ³•
+		System.out.println(BigDecimal.ROUND_HALF_UP); // å››èˆäº”å…¥  4
+		System.out.println(BigDecimal.ROUND_CEILING); // å‘ä¸Šè¿›ä½  2
+		System.out.println(BigDecimal.ROUND_FLOOR); // ä¸è¿›ä½  3
 
-//		±£Áô¼¸Î»Ğ¡Êı  1
+//		ä¿ç•™å‡ ä½å°æ•°  1
 		double demoX=13.232423535;
 		DecimalFormat df1=new DecimalFormat("0.000");
 		String str=df1.format(demoX);
 		System.out.println(str);
-//		±£Áô¼¸Î»Ğ¡Êı  2	
+//		ä¿ç•™å‡ ä½å°æ•°  2	
 		String str02=String.format("%.5f", demoX);
 		System.out.println(str02);
-//		±£Áô¼¸Î»Ğ¡Êı  3
+//		ä¿ç•™å‡ ä½å°æ•°  3
 		BigDecimal c = new BigDecimal(String.valueOf(demoX)).setScale(3,BigDecimal.ROUND_HALF_UP);
 		System.out.println(c);
-//		I/O : java¶ÔÓÚ²Ù×÷ÏµÍ³ÖĞÎÄ¼şÏµÍ³µÄÖ§³Ö
-//		FileÀà£º ÓÃÓÚÃèÊöÎÄ¼şÏµÍ³ÖĞ Ò»¸öÎÄ¼ş »òÕß Ò»¸öÄ¿Â¼
-//		FileÀà¹¦ÄÜ£º Í¨¹ıfile ¿ÉÒÔ»ñÈ¡ÎÄ¼ş»òÕßÄ¿Â¼µÄÃû×Ö ´óĞ¡  ĞŞ¸ÄÈÕÆÚ ¡£¡£¡£ µ«ÊÇ£¡£¡£¡²»ÄÜ¶ÔÎÄ¼şÄÚÈİ½øĞĞ·ÃÎÊ
+//		I/O : javaå¯¹äºæ“ä½œç³»ç»Ÿä¸­æ–‡ä»¶ç³»ç»Ÿçš„æ”¯æŒ
+//		Fileç±»ï¼š ç”¨äºæè¿°æ–‡ä»¶ç³»ç»Ÿä¸­ ä¸€ä¸ªæ–‡ä»¶ æˆ–è€… ä¸€ä¸ªç›®å½•
+//		Fileç±»åŠŸèƒ½ï¼š é€šè¿‡file å¯ä»¥è·å–æ–‡ä»¶æˆ–è€…ç›®å½•çš„åå­— å¤§å°  ä¿®æ”¹æ—¥æœŸ ã€‚ã€‚ã€‚ ä½†æ˜¯ï¼ï¼ï¼ä¸èƒ½å¯¹æ–‡ä»¶å†…å®¹è¿›è¡Œè®¿é—®
 		
-//		FileµÄ·½·¨   exists()   ÅĞ¶Ïµ±Ç°file¶ÔÏóÊÇ·ñ´æÔÚ
-		File file01=new File("D:\\test\\NewFile.java");  //·´Ğ±¸Ü   Ë«·´Ğ±¸Ü ±íÊ¾ ÎÄ¼ş¼Ğ´ÓÊô¹ØÏµ
+//		Fileçš„æ–¹æ³•   exists()   åˆ¤æ–­å½“å‰fileå¯¹è±¡æ˜¯å¦å­˜åœ¨
+		File file01=new File("D:\\test\\NewFile.java");  //åæ–œæ    åŒåæ–œæ  è¡¨ç¤º æ–‡ä»¶å¤¹ä»å±å…³ç³»
 		if(file01.exists()) {
-			System.out.println(file01.getName()); //»ñÈ¡ÎÄ¼şÃû
-			System.out.println(file01.length()); //ÎÄ¼ş´óĞ¡
-			System.out.println(file01.lastModified()); //×îºóĞŞ¸ÄÊ±¼ä
-			System.out.println(file01.getPath()); //»ñÈ¡Â·¾¶
-			System.out.println(file01.canRead()); //ÊÇ·ñ¿É¶Á
-			System.out.println(file01.canWrite());//ÊÇ·ñ¿ÉĞ´
-			System.out.println(file01.canExecute()); //ÊÇ·ñ¿ÉÖ´ĞĞ
+			System.out.println(file01.getName()); //è·å–æ–‡ä»¶å
+			System.out.println(file01.length()); //æ–‡ä»¶å¤§å°
+			System.out.println(file01.lastModified()); //æœ€åä¿®æ”¹æ—¶é—´
+			System.out.println(file01.getPath()); //è·å–è·¯å¾„
+			System.out.println(file01.canRead()); //æ˜¯å¦å¯è¯»
+			System.out.println(file01.canWrite());//æ˜¯å¦å¯å†™
+			System.out.println(file01.canExecute()); //æ˜¯å¦å¯æ‰§è¡Œ
 		}else {
 			try {
-				file01.createNewFile(); //´´½¨ĞÂÎÄ¼ş!!!!
-				System.out.println("ÎÄ¼ş´´½¨³É¹¦");
+				file01.createNewFile(); //åˆ›å»ºæ–°æ–‡ä»¶!!!!
+				System.out.println("æ–‡ä»¶åˆ›å»ºæˆåŠŸ");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-				System.out.println("ÎÄ¼ş´´½¨Ê§°Ü");
+				System.out.println("æ–‡ä»¶åˆ›å»ºå¤±è´¥");
 			}
 		}
 		
-//		´´½¨Ä¿Â¼!!!!!
+//		åˆ›å»ºç›®å½•!!!!!
 		File file02=new File("D:\\test\\1\\2");
-//		System.out.println(file02.mkdir()); //Èç¹û×îºóÒ»¼¶µÄ¸¸Ä¿Â¼²»´æÔÚ£¬ÔòÎŞ·¨´´½¨
+//		System.out.println(file02.mkdir()); //å¦‚æœæœ€åä¸€çº§çš„çˆ¶ç›®å½•ä¸å­˜åœ¨ï¼Œåˆ™æ— æ³•åˆ›å»º
 //		System.out.println(file02.mkdirs());
 		
-//		É¾³ıÄ¿Â¼»òÎÄ¼ş
-//		System.out.println(file02.delete()); //É¾³ı×îºóÒ»¼¶
+//		åˆ é™¤ç›®å½•æˆ–æ–‡ä»¶
+//		System.out.println(file02.delete()); //åˆ é™¤æœ€åä¸€çº§
 		
-//		ÅĞ¶Ïfile¶ÔÏóÊÇ·ñÊÇÎÄ¼ş
+//		åˆ¤æ–­fileå¯¹è±¡æ˜¯å¦æ˜¯æ–‡ä»¶
 		System.out.println(file01.isFile());
 		
-//		ÅĞ¶Ïfile¶ÔÏóÊÇ·ñÊÇÄ¿Â¼
+//		åˆ¤æ–­fileå¯¹è±¡æ˜¯å¦æ˜¯ç›®å½•
 		System.out.println(file02.isDirectory());
 		
-//		»ñÈ¡fileÄ¿Â¼ÏÂµÄËùÓĞ×ÓÏî£¬ÒÔÎÄ¼şÊı×éĞÎÊ½·µ»Ø !!!²»°üº¬×ÓÏîµÄ×ÓÏî
+//		è·å–fileç›®å½•ä¸‹çš„æ‰€æœ‰å­é¡¹ï¼Œä»¥æ–‡ä»¶æ•°ç»„å½¢å¼è¿”å› !!!ä¸åŒ…å«å­é¡¹çš„å­é¡¹
 		File[] file_arr=file02.listFiles();
 		System.out.println(Arrays.toString(file_arr));
-//		»ñÈ¡fileÄ¿Â¼ÏÂµÄËùÓĞ×ÓÏî£¬ÒÔ×Ö·û´®Êı×éĞÎÊ½·µ»Ø£¬Ö»ÏÔÊ¾×ÓÏîÃû !!!²»°üº¬×ÓÏîµÄ×ÓÏî
+//		è·å–fileç›®å½•ä¸‹çš„æ‰€æœ‰å­é¡¹ï¼Œä»¥å­—ç¬¦ä¸²æ•°ç»„å½¢å¼è¿”å›ï¼Œåªæ˜¾ç¤ºå­é¡¹å !!!ä¸åŒ…å«å­é¡¹çš„å­é¡¹
 		String[] str_arr=file02.list();
 		System.out.println(Arrays.toString(str_arr));
 		
 //		case:
-//			1.²é¿´DÅÌÏÂ×ÓÏî£¬ÅĞ¶ÏÆäÊÇÎÄ¼ş»¹ÊÇÄ¿Â¼£¬
-//			ÈôÊÇÄ¿Â¼ ¾ÍÊä³ö   Ä¿Â¼£ºÄ¿Â¼Ãû
-//			ÈôÊÇÎÄ¼ş ¾ÍÊä³ö   ÎÄ¼ş£º ÎÄ¼şÃû
+//			1.æŸ¥çœ‹Dç›˜ä¸‹å­é¡¹ï¼Œåˆ¤æ–­å…¶æ˜¯æ–‡ä»¶è¿˜æ˜¯ç›®å½•ï¼Œ
+//			è‹¥æ˜¯ç›®å½• å°±è¾“å‡º   ç›®å½•ï¼šç›®å½•å
+//			è‹¥æ˜¯æ–‡ä»¶ å°±è¾“å‡º   æ–‡ä»¶ï¼š æ–‡ä»¶å
 //			File fileD=new File("D:\\apache-tomcat-8.5.34");
-//			2.×Ô¼ºÑ¡¶¨Ò»¸öFileÄ¿Â¼¶ÔÏó£¬ Êä³ö¸ÃÄ¿Â¼ÏÂËùÓĞ×ÓÏî
-//			Èô×ÓÏîÊÇÄ¿Â¼£¬¼ÌĞøÊä³öÆä×ÓÏî£¬Ö±µ½ËùÓĞÎÄ¼ş¶¼±»Êä³ö
+//			2.è‡ªå·±é€‰å®šä¸€ä¸ªFileç›®å½•å¯¹è±¡ï¼Œ è¾“å‡ºè¯¥ç›®å½•ä¸‹æ‰€æœ‰å­é¡¹
+//			è‹¥å­é¡¹æ˜¯ç›®å½•ï¼Œç»§ç»­è¾“å‡ºå…¶å­é¡¹ï¼Œç›´åˆ°æ‰€æœ‰æ–‡ä»¶éƒ½è¢«è¾“å‡º
 //			showFile(fileD);
 			
-//			I/O Êı¾İÁ÷:Á½ÖÖ  {×Ö½ÚÁ÷   ×Ö·ûÁ÷}
-//			Çø±ğµÄ£º´¦ÀíÊı¾İµÄ×îĞ¡µ¥Î»£¬Ò»¸öÊÇ×Ö½Ú£¬Ò»¸öÊÇ×Ö·û¡£Èç¹ûÊÇ´¿ÎÄ±¾ÎÄ¼ş£¬ÍÆ¼öÊ¹ÓÃ×Ö·ûÁ÷
+//			I/O æ•°æ®æµ:ä¸¤ç§  {å­—èŠ‚æµ   å­—ç¬¦æµ}
+//			åŒºåˆ«çš„ï¼šå¤„ç†æ•°æ®çš„æœ€å°å•ä½ï¼Œä¸€ä¸ªæ˜¯å­—èŠ‚ï¼Œä¸€ä¸ªæ˜¯å­—ç¬¦ã€‚å¦‚æœæ˜¯çº¯æ–‡æœ¬æ–‡ä»¶ï¼Œæ¨èä½¿ç”¨å­—ç¬¦æµ
 			
-//			×Ö½ÚÁ÷£º ×Ö½ÚÊäÈëÁ÷  inputStream  ×Ö½ÚÊä³öÁ÷  outputStream
-//			×Ö½ÚÊäÈëÊä³öÁ÷
+//			å­—èŠ‚æµï¼š å­—èŠ‚è¾“å…¥æµ  inputStream  å­—èŠ‚è¾“å‡ºæµ  outputStream
+//			å­—èŠ‚è¾“å…¥è¾“å‡ºæµ
 			try {
-				FileInputStream fileIn=new FileInputStream("D:\\test\\ÓĞÄÚÈİÎÄ¼ş.txt");
-				FileOutputStream fileOut =new FileOutputStream("D:\\test\\ÎŞÄÚÈİÎÄ¼ş.txt");				
-				//¶ÁÈ¡ÎÄ¼şÄÚÈİ
+				FileInputStream fileIn=new FileInputStream("D:\\test\\æœ‰å†…å®¹æ–‡ä»¶.txt");
+				FileOutputStream fileOut =new FileOutputStream("D:\\test\\æ— å†…å®¹æ–‡ä»¶.txt");				
+				//è¯»å–æ–‡ä»¶å†…å®¹
 				int temp=0;				
 				while((temp=fileIn.read())!=-1) {
 					fileOut.write(temp);
 				}
-				fileIn.close();   //¹Ø±ÕÊäÈëÁ÷
-				fileOut.close();   //¹Ø±ÕÊä³öÁ÷
+				fileIn.close();   //å…³é—­è¾“å…¥æµ
+				fileOut.close();   //å…³é—­è¾“å‡ºæµ
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -128,14 +128,14 @@ public class ApiDay04 {
 //				File fileN=new File("D:\\test\\bg02.jpg");
 //				fileN.createNewFile();
 				FileOutputStream fileOut =new FileOutputStream("D:\\test\\bg02.jpg");				
-				//¶ÁÈ¡ÎÄ¼şÄÚÈİ
+				//è¯»å–æ–‡ä»¶å†…å®¹
 				int temp=0;
 				
 				while((temp=fileIn.read())!=-1) {
 					fileOut.write(temp);
 				}
-				fileIn.close();   //¹Ø±ÕÊäÈëÁ÷
-				fileOut.close();   //¹Ø±ÕÊä³öÁ÷
+				fileIn.close();   //å…³é—­è¾“å…¥æµ
+				fileOut.close();   //å…³é—­è¾“å‡ºæµ
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -145,18 +145,18 @@ public class ApiDay04 {
 			}
 	}
 	
-	public static void showFile(File file) {   //Ğ´³É·½·¨ ĞÎ²ÎÎªfile¶ÔÏó ·½·¨¹¦ÄÜÎªÊä³ö×ÓÏî
+	public static void showFile(File file) {   //å†™æˆæ–¹æ³• å½¢å‚ä¸ºfileå¯¹è±¡ æ–¹æ³•åŠŸèƒ½ä¸ºè¾“å‡ºå­é¡¹
 		if(file==null) {
 			return;
 		}
-		File[] file_arr=file.listFiles();   //×ªÎªfileÀàĞÍÊı×é
+		File[] file_arr=file.listFiles();   //è½¬ä¸ºfileç±»å‹æ•°ç»„
 
-		for(File f:file_arr) {   //±éÀú¸ÃÊı×é
-			if(f.isDirectory()) {   //ÅĞ¶ÏÊÇ·ñÎªÄ¿Â¼
-				System.out.println("Ä¿Â¼£º"+f);   //ÈôÊÇÄ¿Â¼ ÔòÊä³ö  ²¢½«¸ÃÄ¿Â¼¶ÔÏó×÷ÎªÊµ²ÎÔÙ´ÎÔËĞĞ±¾·½·¨
+		for(File f:file_arr) {   //éå†è¯¥æ•°ç»„
+			if(f.isDirectory()) {   //åˆ¤æ–­æ˜¯å¦ä¸ºç›®å½•
+				System.out.println("ç›®å½•ï¼š"+f);   //è‹¥æ˜¯ç›®å½• åˆ™è¾“å‡º  å¹¶å°†è¯¥ç›®å½•å¯¹è±¡ä½œä¸ºå®å‚å†æ¬¡è¿è¡Œæœ¬æ–¹æ³•
 				showFile(f);
 			}else {
-				System.out.println("ÎÄ¼ş£º"+f);  //ÈôÊÇÎÄ¼ş Ö±½ÓÊä³ö
+				System.out.println("æ–‡ä»¶ï¼š"+f);  //è‹¥æ˜¯æ–‡ä»¶ ç›´æ¥è¾“å‡º
 			}
 		}
 	}
