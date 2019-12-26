@@ -2,6 +2,7 @@ package com.junit;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,8 +15,8 @@ public class TestDefaultController {
 	//Junit会在测试方法之间调用它
 	
 	//After----之后
-	//
-	@Before
+	//@After	//空指针
+	@Before 	//通过
 	public void instantiate() throws Exception{
 		controller = new DeafultController();
 		
