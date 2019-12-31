@@ -1,5 +1,7 @@
 package com.aliyuncs.http;
 
+
+
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.KeyManager;
 import javax.net.ssl.SSLSocketFactory;
@@ -9,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 
-public class HttpClientConfig {
+public class HttpClientConfig<HttpClientType> {
 
     public static final long DEFAULT_CONNECTION_TIMEOUT = 5000;
 
@@ -76,11 +78,11 @@ public class HttpClientConfig {
 
     private boolean compatibleMode = false;
 
-    public static HttpClientConfig getDefault() {
-        HttpClientConfig config = new HttpClientConfig();
-        config.setClientType(HttpClientType.ApacheHttpClient);
-        return config;
-    }
+//    public static HttpClientConfig getDefault() {
+//        HttpClientConfig config = new HttpClientConfig();
+//        config.setClientType(HttpClientType.ApacheHttpClient);
+//        return config;
+//    }
 
     public HttpClientType getClientType() {
         return clientType;
