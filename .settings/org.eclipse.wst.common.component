@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
     <wb-module deploy-name="JavaBase">
-        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/Junit"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/APITest"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/APITest/spider-flow-api"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/APITest/spider-flow-core"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/APITest/spider-flow-web"/>
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
         <property name="context-root" value="JavaBase"/>
         <property name="java-output-path" value="/JavaBase/target/classes"/>
     </wb-module>

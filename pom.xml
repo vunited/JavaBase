@@ -59,6 +59,12 @@
     <properties>
         <powermock.version>2.0.4</powermock.version>
         <mockito.version>3.2.4</mockito.version>
+        
+        
+		<spider-flow.version>0.3.2</spider-flow.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        
     </properties>
     <dependencies>
         <dependency>
@@ -183,6 +189,64 @@
             <version>4.5</version>
             <scope>test</scope>
         </dependency>
+        
+        
+        
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-quartz</artifactId>
+        </dependency>
+		<dependency>
+		    <groupId>commons-io</groupId>
+		    <artifactId>commons-io</artifactId>
+		    <version>2.6</version>
+		</dependency>
+		<dependency>
+		    <groupId>commons-codec</groupId>
+		    <artifactId>commons-codec</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.11.3</version>
+		</dependency>
+		<dependency>
+			<groupId>us.codecraft</groupId>
+			<artifactId>xsoup</artifactId>
+			<version>0.3.1</version>
+		</dependency>
+		<!--<dependency>-->
+		    <!--<groupId>cn.wanghaomiao</groupId>-->
+		    <!--<artifactId>JsoupXpath</artifactId>-->
+		    <!--<version>2.3.2</version>-->
+		    <!--<exclusions>-->
+		    	<!--<exclusion>-->
+		    		<!--<groupId>org.jsoup</groupId>-->
+		    		<!--<artifactId>jsoup</artifactId>-->
+		    	<!--</exclusion>-->
+		    <!--</exclusions>-->
+		<!--</dependency>  -->
+		<dependency>
+			<groupId>org.spiderflow</groupId>
+			<artifactId>spider-flow-api</artifactId>
+			<version>${spider-flow.version}</version>
+		</dependency>
+        
+        
+        	<dependency>  
+           <groupId>org.springframework.boot</groupId>  
+           <artifactId>spring-boot-starter-websocket</artifactId>  
+       	</dependency>
+		<dependency>
+			<groupId>org.spiderflow</groupId>
+			<artifactId>spider-flow-core</artifactId>
+			<version>${spider-flow.version}</version>
+		</dependency>
+        
+        
+        
+        
+        
     </dependencies>
         
         
