@@ -1,15 +1,6 @@
-<!-- <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>JavaBase</groupId>
-  <artifactId>JavaBase</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>sangjiexun</name>
-  <description>javaBase</description> -->
-  
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.aliyun</groupId>
+  
     <artifactId>JavaBase</artifactId>
    
     <version>4.4.9</version>
@@ -57,11 +48,8 @@
         </developer>
     </developers>
     <properties>
-        <powermock.version>2.0.4</powermock.version>
-        <mockito.version>3.2.4</mockito.version>
         
         
-		<spider-flow.version>0.3.2</spider-flow.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         
@@ -72,11 +60,6 @@
            <groupId>org.springframework.boot</groupId>  
            <artifactId>spring-boot-starter-websocket</artifactId>  
        	</dependency>
-		<dependency>
-			<groupId>org.spiderflow</groupId>
-			<artifactId>spider-flow-core</artifactId>
-			<version>${spider-flow.version}</version>
-		</dependency>
 		
 		
 		<dependency>
@@ -92,16 +75,6 @@
 		    <groupId>commons-codec</groupId>
 		    <artifactId>commons-codec</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.jsoup</groupId>
-			<artifactId>jsoup</artifactId>
-			<version>1.11.3</version>
-		</dependency>
-		<dependency>
-			<groupId>us.codecraft</groupId>
-			<artifactId>xsoup</artifactId>
-			<version>0.3.1</version>
-		</dependency>
 		<!--<dependency>-->
 		    <!--<groupId>cn.wanghaomiao</groupId>-->
 		    <!--<artifactId>JsoupXpath</artifactId>-->
@@ -113,11 +86,6 @@
 		    	<!--</exclusion>-->
 		    <!--</exclusions>-->
 		<!--</dependency>  -->
-		<dependency>
-			<groupId>org.spiderflow</groupId>
-			<artifactId>spider-flow-api</artifactId>
-			<version>${spider-flow.version}</version>
-		</dependency>
 <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -159,12 +127,6 @@
     
     
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.8.6</version>
@@ -205,24 +167,9 @@
             <version>${powermock.version}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.powermock</groupId>
-            <artifactId>powermock-reflect</artifactId>
-            <version>${powermock.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.powermock</groupId>
-            <artifactId>powermock-module-junit4</artifactId>
-            <version>${powermock.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.powermock</groupId>
-            <artifactId>powermock-api-mockito2</artifactId>
-            <version>${powermock.version}</version>
-            <scope>test</scope>
-        </dependency>
+     
+     
+        
         <dependency>
             <groupId>org.jacoco</groupId>
             <artifactId>org.jacoco.agent</artifactId>
@@ -235,22 +182,8 @@
             <version>1.18.10</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.ini4j</groupId>
-            <artifactId>ini4j</artifactId>
-            <version>0.5.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.30</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.7.30</version>
-            <scope>test</scope>
-        </dependency>
+      
+     
         
         
 		<dependency>
@@ -436,4 +369,5 @@
             
         </plugins>
     </build>
+    <groupId>net.vunited</groupId>
 </project>
