@@ -10,8 +10,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.aliyun</groupId>
-    <artifactId>aliyun-java-sdk-core</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>JavaBase</artifactId>
+   
     <version>4.4.9</version>
     <name>aliyun-java-sdk-core</name>
     <url>http://www.aliyun.com</url>
@@ -67,6 +67,97 @@
         
     </properties>
     <dependencies>
+    
+    <dependency>  
+           <groupId>org.springframework.boot</groupId>  
+           <artifactId>spring-boot-starter-websocket</artifactId>  
+       	</dependency>
+		<dependency>
+			<groupId>org.spiderflow</groupId>
+			<artifactId>spider-flow-core</artifactId>
+			<version>${spider-flow.version}</version>
+		</dependency>
+		
+		
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-quartz</artifactId>
+        </dependency>
+		<dependency>
+		    <groupId>commons-io</groupId>
+		    <artifactId>commons-io</artifactId>
+		    <version>2.6</version>
+		</dependency>
+		<dependency>
+		    <groupId>commons-codec</groupId>
+		    <artifactId>commons-codec</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.11.3</version>
+		</dependency>
+		<dependency>
+			<groupId>us.codecraft</groupId>
+			<artifactId>xsoup</artifactId>
+			<version>0.3.1</version>
+		</dependency>
+		<!--<dependency>-->
+		    <!--<groupId>cn.wanghaomiao</groupId>-->
+		    <!--<artifactId>JsoupXpath</artifactId>-->
+		    <!--<version>2.3.2</version>-->
+		    <!--<exclusions>-->
+		    	<!--<exclusion>-->
+		    		<!--<groupId>org.jsoup</groupId>-->
+		    		<!--<artifactId>jsoup</artifactId>-->
+		    	<!--</exclusion>-->
+		    <!--</exclusions>-->
+		<!--</dependency>  -->
+		<dependency>
+			<groupId>org.spiderflow</groupId>
+			<artifactId>spider-flow-api</artifactId>
+			<version>${spider-flow.version}</version>
+		</dependency>
+<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.58</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-text</artifactId>
+		    <version>1.6</version>
+		</dependency>
+		<dependency>
+	        <groupId>com.baomidou</groupId>
+	        <artifactId>mybatis-plus-boot-starter</artifactId>
+	        <version>3.1.0</version>
+	    </dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>druid-spring-boot-starter</artifactId>
+		    <version>1.1.16</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>transmittable-thread-local</artifactId>
+			<version>2.11.2</version>
+		</dependency>
+    
+    
+    
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -189,22 +280,7 @@
             <version>4.5</version>
             <scope>test</scope>
         </dependency>
-        
-        
-        
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-quartz</artifactId>
-        </dependency>
-		<dependency>
-		    <groupId>commons-io</groupId>
-		    <artifactId>commons-io</artifactId>
-		    <version>2.6</version>
-		</dependency>
-		<dependency>
-		    <groupId>commons-codec</groupId>
-		    <artifactId>commons-codec</artifactId>
-		</dependency>
+       
 		<dependency>
 			<groupId>org.jsoup</groupId>
 			<artifactId>jsoup</artifactId>
@@ -226,22 +302,7 @@
 		    	<!--</exclusion>-->
 		    <!--</exclusions>-->
 		<!--</dependency>  -->
-		<dependency>
-			<groupId>org.spiderflow</groupId>
-			<artifactId>spider-flow-api</artifactId>
-			<version>${spider-flow.version}</version>
-		</dependency>
-        
-        
-        	<dependency>  
-           <groupId>org.springframework.boot</groupId>  
-           <artifactId>spring-boot-starter-websocket</artifactId>  
-       	</dependency>
-		<dependency>
-			<groupId>org.spiderflow</groupId>
-			<artifactId>spider-flow-core</artifactId>
-			<version>${spider-flow.version}</version>
-		</dependency>
+	
         
         
         
@@ -359,6 +420,16 @@
 
                 </executions>
             </plugin>
+            
+            <plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<finalName>spider-flow</finalName>
+					<mainClass>org.spiderflow.SpiderApplication</mainClass>
+				</configuration>
+			</plugin>
+            
         </plugins>
     </build>
 </project>

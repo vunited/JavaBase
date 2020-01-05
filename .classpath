@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/Java SE 8 [1.8.0_191]">
 		<attributes>
+			<attribute name="module" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="Junit"/>
-	<classpathentry excluding="resources/|resources/com/aliyuncs/sdk/|aliyun-java-sdk-core/src/main/resources/|baseFile/|spider-flow-api/|spider-flow-core/|spider-flow-web/" kind="src" path="APITest"/>
+	<classpathentry excluding="resources/|resources/com/aliyuncs/sdk/|aliyun-java-sdk-core/src/main/resources/|baseFile/|spider-flow-api/|spider-flow-core/|spider-flow-web/|aliyun-java-sdk-core/src/main/java/com/aliyuncs/|aliyun-java-sdk-core/src/main/java/com/aliyuncs/" kind="src" path="APITest"/>
 	<classpathentry kind="src" path="APITest/aliyun-java-sdk-core/src/main/resources"/>
-	<classpathentry kind="src" path="APITest/spider-flow-api"/>
-	<classpathentry kind="src" path="APITest/spider-flow-core"/>
-	<classpathentry kind="src" path="APITest/spider-flow-web"/>
+	<classpathentry kind="src" path="spider"/>
+	<classpathentry kind="src" path="APITest/aliyun-java-sdk-core/src/main/java/com/aliyuncs"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry exported="true" kind="lib" path="src/hamcrest-2.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="jsoup-1.12.1.jar"/>
