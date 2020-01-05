@@ -6,7 +6,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="Junit"/>
 	<classpathentry excluding="resources/|resources/com/aliyuncs/sdk/|aliyun-java-sdk-core/src/main/resources/|baseFile/|spider-flow-api/|spider-flow-core/|spider-flow-web/|aliyun-java-sdk-core/src/main/java/com/aliyuncs/|aliyun-java-sdk-core/src/main/java/com/aliyuncs/" kind="src" path="APITest"/>
 	<classpathentry kind="src" path="APITest/aliyun-java-sdk-core/src/main/resources"/>
 	<classpathentry kind="src" path="spider"/>
