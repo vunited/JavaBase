@@ -1,12 +1,18 @@
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  
-    <artifactId>JavaBase</artifactId>
-   
-    <version>4.4.9</version>
-    <name>aliyun-java-sdk-core</name>
+    <!-- 描述这个POM文件是遵从哪个版本的项目描述符 -->
+  <modelVersion>4.0.0</modelVersion>
+    <groupId>com.aliyun</groupId>
+    <artifactId>java-sdk-function-test</artifactId>
+
+   <packaging>jar</packaging>
+    <version>4.0.8</version>
+    <name>java-sdk-function-test</name>
     <url>http://www.aliyun.com</url>
     <description>Aliyun Open API SDK for Java
+
 
         Copyright (C) Alibaba Cloud Computing
         All rights reserved.
@@ -27,18 +33,13 @@
         </repository>
     </distributionManagement>
 
-    <licenses>
-        <license>
-            <name></name>
-            <url></url>
-            <distribution></distribution>
-        </license>
-    </licenses>
-    <scm>
+    <!--================== 指定项目所继承的父POM ==================-->
+ <scm>
         <connection>scm:git:git://github.com/aliyun/aliyun-openapi-java-sdk.git</connection>
         <developerConnection>scm:git:git@github.com:aliyun/aliyun-openapi-java-sdk.git</developerConnection>
         <url>https://github.com/aliyun/aliyun-openapi-java-sdk</url>
     </scm>
+
 
     <developers>
         <developer>
@@ -47,327 +48,157 @@
             <email>aliyunsdk@aliyun.com</email>
         </developer>
     </developers>
-    <properties>
-        
-        
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        
-    </properties>
     <dependencies>
-    
-    <dependency>  
-           <groupId>org.springframework.boot</groupId>  
-           <artifactId>spring-boot-starter-websocket</artifactId>  
-       	</dependency>
-		
-		
-		<dependency>
+        <!-- Core -->
+ <!-- html跳转 -->
+     <!--   
+        <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-quartz</artifactId>
-        </dependency>
-		<dependency>
-		    <groupId>commons-io</groupId>
-		    <artifactId>commons-io</artifactId>
-		    <version>2.6</version>
-		</dependency>
-		<dependency>
-		    <groupId>commons-codec</groupId>
-		    <artifactId>commons-codec</artifactId>
-		</dependency>
-		<!--<dependency>-->
-		    <!--<groupId>cn.wanghaomiao</groupId>-->
-		    <!--<artifactId>JsoupXpath</artifactId>-->
-		    <!--<version>2.3.2</version>-->
-		    <!--<exclusions>-->
-		    	<!--<exclusion>-->
-		    		<!--<groupId>org.jsoup</groupId>-->
-		    		<!--<artifactId>jsoup</artifactId>-->
-		    	<!--</exclusion>-->
-		    <!--</exclusions>-->
-		<!--</dependency>  -->
-<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>1.2.58</version>
-		</dependency>
-		<dependency>
-		    <groupId>org.apache.commons</groupId>
-		    <artifactId>commons-text</artifactId>
-		    <version>1.6</version>
-		</dependency>
-		<dependency>
-	        <groupId>com.baomidou</groupId>
-	        <artifactId>mybatis-plus-boot-starter</artifactId>
-	        <version>3.1.0</version>
-	    </dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>com.alibaba</groupId>
-		    <artifactId>druid-spring-boot-starter</artifactId>
-		    <version>1.1.16</version>
-		</dependency>
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>transmittable-thread-local</artifactId>
-			<version>2.11.2</version>
-		</dependency>
-    
-    
-    
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.8.6</version>
-        </dependency>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency> -->
         
-<!--         
-        <dependency>
-  <groupId>org.apache.httpcomponents</groupId>
-  <artifactId>httpclient</artifactId>
-  <version>4.3.6</version>
-</dependency>
- -->
-
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpcore</artifactId>
-            <version>4.4.12</version>
+          <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-ccc</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/ccc.jar</systemPath>
         </dependency>
         <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <version>1.2</version>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-cdn</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/cdn.jar</systemPath>
         </dependency>
         <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-            <version>2.3.1</version>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-cloudapi</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/cloudapi.jar</systemPath>
         </dependency>
         <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>${mockito.version}</version>
-            <scope>test</scope>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-core</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/core.jar</systemPath>
         </dependency>
         <dependency>
-            <groupId>org.powermock</groupId>
-            <artifactId>powermock-core</artifactId>
-            <version>${powermock.version}</version>
-            <scope>test</scope>
-        </dependency>
-     
-     
-        
-        <dependency>
-            <groupId>org.jacoco</groupId>
-            <artifactId>org.jacoco.agent</artifactId>
-            <version>0.8.5</version>
-            <classifier>runtime</classifier>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-ecs</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/ecs.jar</systemPath>
         </dependency>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.10</version>
-            <scope>provided</scope>
-        </dependency>
-      
-     
-        
-        
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>1.2.25</version>
-		</dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.2.1</version>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-ram</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/ram.jar</systemPath>
         </dependency>
         <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpcore</artifactId>
-            <version>4.2.1</version>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-rds</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/rds.jar</systemPath>
         </dependency>
         <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <version>2.6</version>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-ros</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/ros.jar</systemPath>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-util</artifactId>
-            <version>9.3.7.v20160115</version>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-slb</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/slb.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-vpc</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/vpc.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-airec</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/airec.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-green</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/green.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.5</version>
+            <version>4.12</version>
             <scope>test</scope>
         </dependency>
-       
-		<dependency>
-			<groupId>org.jsoup</groupId>
-			<artifactId>jsoup</artifactId>
-			<version>1.11.3</version>
-		</dependency>
-		<dependency>
-			<groupId>us.codecraft</groupId>
-			<artifactId>xsoup</artifactId>
-			<version>0.3.1</version>
-		</dependency>
-		<!--<dependency>-->
-		    <!--<groupId>cn.wanghaomiao</groupId>-->
-		    <!--<artifactId>JsoupXpath</artifactId>-->
-		    <!--<version>2.3.2</version>-->
-		    <!--<exclusions>-->
-		    	<!--<exclusion>-->
-		    		<!--<groupId>org.jsoup</groupId>-->
-		    		<!--<artifactId>jsoup</artifactId>-->
-		    	<!--</exclusion>-->
-		    <!--</exclusions>-->
-		<!--</dependency>  -->
-	
-        
-        
-        
-        
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.3</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-core</artifactId>
+            <version>2.1.14</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.25</version>
+            <scope>test</scope>
+        </dependency>
         
     </dependencies>
-        
-        
 
     <build>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-                <includes>
-                    <include>project.properties</include>
-                    <include>endpoints.json</include>
-                    <include>regions.txt</include>
-                </includes>
-            </resource>
-        </resources>
-        <sourceDirectory>src/main/java</sourceDirectory>
         <plugins>
+            <!-- spring boot 的maven打包插件, 打包后, 使用 java -jar -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.1.1</version>
-                <configuration>
-                    <encoding>UTF-8</encoding>
-                    <doclint>none</doclint>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.6</version>
-                <executions>
-                    <execution>
-                        <id>sign-artifacts</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.8</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <serverId>sonatype-nexus-staging</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
-                <configuration>
-                    <systemPropertyVariables>
-                        <jacoco-agent.destfile>${project.build.directory}/coverage.exec</jacoco-agent.destfile>
-                    </systemPropertyVariables>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.5</version>
-                <executions>
-                    <execution>
-                        <id>default-instrument</id>
-                        <goals>
-                            <goal>instrument</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>default-restore-instrumented-classes</id>
-                        <!-- default phase is pre-package, move up here -->
-                        <phase>test</phase>
-                        <goals>
-                            <goal>restore-instrumented-classes</goal>
-                        </goals>
-                    </execution>
-                    <!-- keep after maven-surefire-plugin, report will use coverage.exec generated by maven-surefire-plugin-->
-                    <execution>
-                        <id>report</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                        <configuration>
-                            <dataFile>${project.build.directory}/coverage.exec</dataFile>
-                        </configuration>
-                    </execution>
-
-                </executions>
-            </plugin>
-            
-            <plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<finalName>spider-flow</finalName>
-					<mainClass>org.spiderflow.SpiderApplication</mainClass>
-				</configuration>
-			</plugin>
-            
         </plugins>
+        <!-- 打包的项目名 -->
+        <finalName>javabase</finalName>
     </build>
-    <groupId>net.vunited</groupId>
+    <groupId>com.javabase</groupId>
+    <artifactId>javabase</artifactId>
+    <version>1.0.1</version>
 </project>
