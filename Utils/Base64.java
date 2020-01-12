@@ -1,24 +1,23 @@
-package com.show.api.util;
 
 public class Base64 {
 	/**
 	 * 将原始数据编码为base64编码
 	 */
-	public static  String encode(byte[] data) {
+	public static String encode(byte[] data) {
 		char[] out = new char[((data.length + 2) / 3) * 4];
 
 		for (int i = 0, index = 0; i < data.length; i += 3, index += 4) {
 			boolean quad = false;
 			boolean trip = false;
-			int val = (0xFF & (int) data[i]);
+			int val = (0xFF & data[i]);
 			val <<= 8;
 			if ((i + 1) < data.length) {
-				val |= (0xFF & (int) data[i + 1]);
+				val |= (0xFF & data[i + 1]);
 				trip = true;
 			}
 			val <<= 8;
 			if ((i + 2) < data.length) {
-				val |= (0xFF & (int) data[i + 2]);
+				val |= (0xFF & data[i + 2]);
 				quad = true;
 			}
 			out[index + 3] = alphabet[(quad ? (val & 0x3F) : 64)];
@@ -36,7 +35,7 @@ public class Base64 {
 	 * 将base64编码的数据解码成原始数据
 	 */
 	static public byte[] decode(String strOut) {
-		char[] data=strOut.toCharArray();
+		char[] data = strOut.toCharArray();
 		int len = ((data.length + 3) / 4) * 3;
 		if (data.length > 0 && data[data.length - 1] == '=')
 			--len;
@@ -63,8 +62,7 @@ public class Base64 {
 		return out;
 	}
 
-	static private char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
-			.toCharArray();
+	static private char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".toCharArray();
 
 	static private byte[] codes = new byte[256];
 	static {
@@ -79,14 +77,15 @@ public class Base64 {
 		codes['+'] = 62;
 		codes['/'] = 63;
 	}
-	 public static void main(String[] args) throws Exception  {  
-	      //加密成base64  
-	      String strSrc = "加密成base64 ";  
-	      String strOut =Base64.encode(strSrc.getBytes());  
-	      System.out.println(strOut);  
-	  
-	      String strOut2 = new String(Base64.decode(strOut));  
-	      System.out.println(strOut2);  
-	    }  
+
+	public static void main(String[] args) throws Exception {
+		// 加密成base64
+		String strSrc = "加密成base64 ";
+		String strOut = Base64.encode(strSrc.getBytes());
+		System.out.println(strOut);
+
+		String strOut2 = new String(Base64.decode(strOut));
+		System.out.println(strOut2);
+	}
 
 }
